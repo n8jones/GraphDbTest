@@ -14,16 +14,16 @@ import org.junit.rules.TemporaryFolder;
 import me.natejones.orientdbtest.GraphDbTestHarness.PropType;
 
 public class GraphDbPerformanceTest {
-	private static final String PROJECT = "Project";
-	private static final String PROJECT_HAS_ARTIFACT = "project_has_artifact";
-	private static final String ARTIFACT = "Artifact";
-	private static final String ARTIFACT_HAS_ARTIFACT_VERSION =
+	static final String PROJECT = "Project";
+	static final String PROJECT_HAS_ARTIFACT = "project_has_artifact";
+	static final String ARTIFACT = "Artifact";
+	static final String ARTIFACT_HAS_ARTIFACT_VERSION =
 			"artifact_has_artifact_version";
-	private static final String ARTIFACT_VERSION = "ArtifactVersion";
-	private static final String ARTIFACT_VERSION_HAS_ARTIFACT_ELEMENT =
+	static final String ARTIFACT_VERSION = "ArtifactVersion";
+	static final String ARTIFACT_VERSION_HAS_ARTIFACT_ELEMENT =
 			"artifact_version_has_artifact_element";
-	private static final String ARTIFACT_ELEMENT = "ArtifactElement";
-	private static final String ID = "aid";
+	static final String ARTIFACT_ELEMENT = "ArtifactElement";
+	static final String ID = "aid";
 	private static int VERTEX_COUNT = 10_000;
 
 	@Rule
@@ -37,6 +37,11 @@ public class GraphDbPerformanceTest {
 	@Test
 	public void test_neo4j() throws Exception {
 		runHarness(new Neo4jTestHarness(folder.newFolder("test_neo4j")));
+	}
+
+	@Test
+	public void test_sparksee() throws Exception {
+		runHarness(new SparkseeTestHarness(folder.newFolder("test_sparksee")));
 	}
 
 	public void runHarness(final GraphDbTestHarness harness) throws Exception {
