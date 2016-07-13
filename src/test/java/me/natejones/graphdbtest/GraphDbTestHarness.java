@@ -1,4 +1,4 @@
-package me.natejones.orientdbtest;
+package me.natejones.graphdbtest;
 
 import java.util.Map;
 import java.util.stream.Stream;

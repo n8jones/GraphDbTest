@@ -2,9 +2,9 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>me.natejones</groupId>
-	<artifactId>OrientDbTest</artifactId>
+	<artifactId>GraphDbTest</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>OrientDB Test</name>
+	<name>GraphDB Test</name>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -30,6 +30,7 @@
 			<groupId>com.sparsity</groupId>
 			<artifactId>sparkseejava</artifactId>
 			<version>5.2.0</version>
+			<scope>compile</scope>
 		</dependency>
 
 

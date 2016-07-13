@@ -1,4 +1,4 @@
-package me.natejones.orientdbtest;
+package me.natejones.graphdbtest;
 
 import static org.junit.Assert.assertEquals;
 
@@ -11,7 +11,7 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TemporaryFolder;
 
-import me.natejones.orientdbtest.GraphDbTestHarness.PropType;
+import me.natejones.graphdbtest.GraphDbTestHarness.PropType;
 
 public class GraphDbPerformanceTest {
 	static final String PROJECT = "Project";
