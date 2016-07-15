@@ -7,10 +7,6 @@ import java.time.LocalTime;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.rules.TemporaryFolder;
-
 import me.natejones.graphdbtest.GraphDbTestHarness.PropType;
 
 public class GraphDbPerformanceTest {
@@ -25,24 +21,6 @@ public class GraphDbPerformanceTest {
 	static final String ARTIFACT_ELEMENT = "ArtifactElement";
 	static final String ID = "aid";
 	private static int VERTEX_COUNT = 10_000;
-
-	@Rule
-	public TemporaryFolder folder = new TemporaryFolder();
-
-	@Test
-	public void test_orient_db() throws Exception {
-		runHarness(new OrientDbTestHarness(folder.newFolder("test_orient_db")));
-	}
-
-	@Test
-	public void test_neo4j() throws Exception {
-		runHarness(new Neo4jTestHarness(folder.newFolder("test_neo4j")));
-	}
-
-	@Test
-	public void test_sparksee() throws Exception {
-		runHarness(new SparkseeTestHarness(folder.newFolder("test_sparksee")));
-	}
 
 	public void runHarness(final GraphDbTestHarness harness) throws Exception {
 		System.out

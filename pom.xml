@@ -1,44 +1,22 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>me.natejones</groupId>
-	<artifactId>GraphDbTest</artifactId>
+	<groupId>me.natejones.graphdbtest</groupId>
+	<artifactId>graphdbtest-parent</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>GraphDB Test</name>
+	<name>GraphDB Test Parent</name>
+	<packaging>pom</packaging>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
-	<dependencies>
-		<dependency>
-			<groupId>com.orientechnologies</groupId>
-			<artifactId>orientdb-graphdb</artifactId>
-			<version>2.2.0</version>
-			<scope>compile</scope>
-		</dependency>
-
-		<dependency>
-			<groupId>org.neo4j</groupId>
-			<artifactId>neo4j</artifactId>
-			<version>3.0.3</version>
-			<scope>compile</scope>
-		</dependency>
-
-		<dependency>
-			<groupId>com.sparsity</groupId>
-			<artifactId>sparkseejava</artifactId>
-			<version>5.2.0</version>
-			<scope>compile</scope>
-		</dependency>
-
-
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.8.2</version>
-			<scope>test</scope>
-		</dependency>
-	</dependencies>
+	<modules>
+		<module>common</module>
+		<module>orientdb</module>
+		<module>neo4j</module>
+		<module>sparksee</module>
+		<module>blazegraph</module>
+	</modules>
 </project>
